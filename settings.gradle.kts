@@ -24,4 +24,9 @@ dependencyResolutionManagement {
 
 rootProject.name = "ANZAssessment"
 include(":app")
- 
+include(":core:common")
+include(":core:network")
+include(":data")
+include(":domain")
+include(":feature:userdetails")
+include(":feature:userlist")
