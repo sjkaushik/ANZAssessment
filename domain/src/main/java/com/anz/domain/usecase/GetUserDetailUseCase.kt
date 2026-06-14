@@ -10,7 +10,7 @@ import javax.inject.Inject
 
 class GetUserDetailUseCase @Inject constructor(private val repository: UsersRepository) {
 
-    operator fun invoke(userId : Int) : Flow<Resource<UserResponse>> = flow {
+    operator fun invoke(userId: Int): Flow<Resource<UserResponse>> = flow {
         try {
             emit(Resource.Loading())
             val user = repository.getUserById(userId)
