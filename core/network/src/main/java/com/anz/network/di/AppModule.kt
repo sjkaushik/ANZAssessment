@@ -1,5 +1,6 @@
 package com.anz.network.di
 
+import com.anz.common.constants.AppConstants.BASE_URL
 import com.anz.domain.remote.UsersApi
 import dagger.Module
 import dagger.Provides
@@ -17,7 +18,7 @@ class AppModule {
     @Singleton
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://fake-json-api.mock.beeceptor.com/")
+            .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
